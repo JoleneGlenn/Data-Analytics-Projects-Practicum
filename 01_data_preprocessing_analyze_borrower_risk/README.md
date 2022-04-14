@@ -23,9 +23,13 @@ The report will be considered when building a credit score for a potential custo
 
 ### Libraries Used
 pandas as pd
+
 nltk
+
 WordNetLemmatizer from nltk.stem
+
 Counter from collections
+
 SnowballStemmer from nltk.stem
 
 ### Project Conclusions

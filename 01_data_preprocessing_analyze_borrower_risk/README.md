@@ -48,14 +48,19 @@ My role was to interpret the requirements and create a report using jupyter note
 
 Read .csv files as a dataframe
 - pd.read_csv()
+
 Identify missing values
 - df.isnull().sum(), df['column'].isnull()
+
 Change data types
-- df['col_a'] = df['col_a'].astype(int) Used .astype(int) method to convert float64 type to int64 type because float64 is a numeric data type.
-- If the initial data type was a string, then .to_numeric() would be used which converts strings to floats and then .astype() to convert the float to int.
+- df['col_a'] = df['col_a'].astype(int) 
+	- Used .astype(int) method to convert float64 type to int64 type because float64 is a numeric data type.
+	- If the initial data type was a string, then .to_numeric() would be used which converts strings to floats and then .astype() to convert the float to int.
+
 Find and delete duplicate rows
 - Number of duplicate rows: df.duplicated().sum()
 - Delete duplicate rows: df.drop_duplicates().reset_index(drop = True)
+
 Categorize the data
 - Functions and .apply()
 - Single line for loops?
@@ -64,12 +69,15 @@ Categorize the data
 	- allwords = ' '.join(df['column'])
 	- wordnet_lemma = WordNetLemmatizer()
 	- words = nltk.word_tokenize(allwords)
+
 Lemmatization
 - lemmas = [wordnet_lemma.lemmatize(w, pos = 'n') for w in allwords]
 - print(Counter(lemmas), '\n') # print number of each word
+
 Stemmer
 - create list of words to stem
 - english_stemmer = SnowballStemmer('english')
+
 Analysis
 - Absolute values
 	- df['column'].abs()

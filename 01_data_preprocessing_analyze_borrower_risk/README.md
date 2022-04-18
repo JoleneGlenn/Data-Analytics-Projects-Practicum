@@ -45,7 +45,9 @@ Unlikely indicators of defaulting
 
 ### Credits
 This project concept was designed by Practicum Data Analysis Bootcamp. It is a course project for the Data Preprocessing sprint. 
+
 Practicum provided the data set and the project requirements. 
+
 My role was to interpret the requirements and create a report using jupyter notebook. The project was submitted for a review process.
 
 ### Applied Techniques
@@ -67,12 +69,14 @@ Find and delete duplicate rows
 
 Categorize the data
 - Functions and .apply()
-- Single line for loops?
+- Single line for loops
 - for loops
 - Tokenization of words
-	- allwords = ' '.join(df['column'])
-	- wordnet_lemma = WordNetLemmatizer()
-	- words = nltk.word_tokenize(allwords)
+```
+	allwords = ' '.join(df['column'])
+	wordnet_lemma = WordNetLemmatizer()
+	words = nltk.word_tokenize(allwords)
+```
 
 Lemmatization
 - lemmas = [wordnet_lemma.lemmatize(w, pos = 'n') for w in allwords]
@@ -83,11 +87,15 @@ Stemmer
 - english_stemmer = SnowballStemmer('english')
 
 Analysis
-- Absolute values
-	- df['column'].abs()
-- Groupby and value counts
-	- df.groupby('column1')['column2'].value_counts(dropna=False)
-- Lowercase letters
-	- df['column'].str.lower()
-- Pivot Tables
-	- df.pivot_table(index, columns, values, aggfunc, fill_value = 0, margins = True)
+
+Absolute values
+- df['column'].abs()
+
+Groupby and value counts
+- df.groupby('column1')['column2'].value_counts(dropna=False)
+
+Lowercase letters
+- df['column'].str.lower()
+
+Pivot Tables
+- df.pivot_table(index, columns, values, aggfunc, fill_value = 0, margins = True)

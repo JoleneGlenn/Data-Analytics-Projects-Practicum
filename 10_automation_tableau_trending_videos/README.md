@@ -7,8 +7,8 @@ Sterling & Draper advertising agency require analysis on trending YouTube videos
 Create a dashboard to answer specific questions that require answers each week.
 
 ### How to use this project
-1. See the technical_README - submitted with project
-2. Link to dashboard: https://public.tableau.com/app/profile/jolene.glenn/viz/TrendingYouTubeVideosNovember142017toJune142018/DashboardTredingYouTubeVideos
+1. See the [technical_README](https://github.com/JoleneGlenn/Data-Analytics-Projects-Practicum/blob/main/10_automation_tableau_trending_videos/technical_README.txt) - submitted with project.
+2. [Dashboard](https://public.tableau.com/app/profile/jolene.glenn/viz/TrendingYouTubeVideosNovember142017toJune142018/DashboardTredingYouTubeVideos)
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Use Tableau Public to create a dashboard of trending YouTube videos 

@@ -8,7 +8,7 @@ Use a database that contains books, publishers, authors, and customer ratings, a
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: There is a table of contents with Markdown links to assist in finding the desired information.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
-4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. Please see a visual of the project [here](http://htmlpreview.github.io/?https://github.com/JoleneGlenn/Data-Analytics-Projects-Practicum/blob/main/13.2_final_sql_value_proposition/13_2_sql_accepted.html).**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Describe the goals of the study

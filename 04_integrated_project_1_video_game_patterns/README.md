@@ -38,6 +38,7 @@ stats as st from scipy
 reduce from functools
 
 **Error Handling**
+
 sys
 
 warnings

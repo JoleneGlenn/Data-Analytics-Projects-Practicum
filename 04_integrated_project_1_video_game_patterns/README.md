@@ -10,6 +10,7 @@ The evaluation of the data will be used to plan an advertisement campaign for th
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: This is one my very first coding projects, it contains details on the project and the work I performed, however it does not have a table of contents and I was still learning the syntax of Markdown, so finding the desired information in the formatting may be difficult.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -94,6 +95,7 @@ My role was to interpret the requirements and create a report using jupyter note
 ### Applied Techniques
 
 **Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -119,6 +121,7 @@ Replace out of place value
 	- ex: games['user_score'] = games['users_score'].replace('tbd', None)
 
 **Analysis**
+
 Create new columns with requested calculation
 
 Filter data
@@ -141,6 +144,7 @@ Make list from a df column
 - list_a = list(df['col'])
 
 **Graphs**
+
 Bar plots
 - table.plot(kind = 'bar')
 
@@ -152,6 +156,7 @@ Scatter plots
 - df.plot(kind = 'scatter', x = 'col_a', y = 'col_b')
 
 **Hypothesis Testing**
+
 Calculate Dispersion
 - np.var(list)
 

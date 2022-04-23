@@ -10,6 +10,7 @@ Perform preliminary analysis on 500 Megaline clients by analyzing their stats an
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: This is one my very first coding projects, it contains details on the project and the work I performed, however it does not have a table of contents and I was still learning the syntax of Markdown, so finding the desired information in the formatting may be difficult.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -59,6 +60,8 @@ Practicum provided the data set and the project requirements.
 My role was to interpret the requirements and create a report using jupyter notebook. The project was submitted for a review process.
 
 ### Applied Techniques
+**Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -80,7 +83,7 @@ Change data types
 - If the initial data type was a string, then .to_numeric() would be used which converts strings to floats and then .astype() to convert the float to int.
 - df['columna'] = pd.to_datetime(df['columna'])
 
-Analysis
+**Analysis**
 
 Filter tables
 - df.query('column boolean_statment column or @list')
@@ -115,7 +118,7 @@ Functions created to calculate necessary information
 Calculated information
 - totals ('sum'), averages ('mean'), standard  deviations('std'), dispersion (np.var) for each plan in pivot_tables
 
-Graphs
+**Graphs**
 
 2 histograms on one graph
 ```
@@ -125,7 +128,7 @@ Graphs
 
 bar plots
 
-Hypothesis Testing
+**Hypothesis Testing**
 
 Test the equality of the means of two populations
 - results = scipy.stats.ttest_ind(list_pop_1_values, list_pop_2_values, equal_var = True or False)

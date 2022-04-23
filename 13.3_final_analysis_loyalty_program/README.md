@@ -10,6 +10,7 @@ The results and recommendations will be submitted to the Project Manager who is 
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: There is a table of contents with Markdown links to assist in finding the desired information.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -36,6 +37,7 @@ scipy.stats as st
 math as mth
 
 **Error Handling**
+
 sys 
 
 warnings
@@ -77,6 +79,7 @@ My role was to interpret the requirements and create a report using jupyter note
 
 ### Applied Techniques
 **Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -108,6 +111,7 @@ Process Anomalies
 	- specific column: df['col'].describe()
 
 **Analysis**
+
 Evaluate percentiles
 - Create dictionary of percentiles
 	- percentile_dict = [#, #, #, ...]
@@ -122,6 +126,7 @@ Evaluate percentiles
 		- table.columns = ['col_a', 'col_b', ...]
 
 **Graphs**
+
 Histograms
 - Created a function to graph histograms
 - df['col'].hist()
@@ -131,6 +136,7 @@ Bar plots
 - graph_name.set_xticklabels(df['col'], rotation = ##)
 
 **Hypothesis Testing**
+
 Evaluate dispersion of the populations being tested
 - np.var(list_of_values)
 
@@ -144,6 +150,6 @@ Calculate p-value
 Critical statistical significance level
 - alpha = 0.05 (common to be between 0.01 - 0.05)
 
-
+Hypothesis Outcomes
 - if results < alpha then null hypothesis is rejected, there is a significant difference between the averages of the populations
 - if results > alpha then null hypothesis cant be rejected, there is not a significant difference between the averages of the populations

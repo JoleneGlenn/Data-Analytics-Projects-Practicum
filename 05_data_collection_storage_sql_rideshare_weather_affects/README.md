@@ -12,6 +12,7 @@ Working with a database, analyze data from competitors and test a hypothesis abo
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: There is a table of contents, however it does not have links as I was still learning the syntax of Markdown, so finding the desired information in the formatting may be difficult.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Parse the data - python on Practicum platform
@@ -52,6 +53,7 @@ My role was to interpret the requirements and create a report using jupyter note
 **Python (pre SQL)**
 
 **Parse the data**
+
 Request access to URL
 - data_req = requests.get(URL)
 
@@ -80,7 +82,9 @@ Create df from request
 - df = pd.DataFrame(contents, columns = headers)
 
 **SQL**
+
 **Commands**
+
 SELECT
 ```
 	AGGREGATE_FUNCTION(field) AS output_col_name
@@ -136,6 +140,7 @@ Date functions
 **Python**
 
 **Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -150,16 +155,19 @@ Change data types
 - df['columna'] = pd.to_datetime(df['columna'])
 
 **Analysis**
+
 Create df from sorted values
 - df = df.sort_values(by = 'col', ascending = False).head(10)
 - df_top_10 = pd.DataFrame(df)
 
 **Graphs**
+
 Bar plots
 - graph_name = df.plot(kind = 'bar')
 - graph_name.set_xticklabels(df['column']) - sets x tick labels with df column values
 
 **Hypothesis testing**
+
 Calculate Dispersion
 - np.var(list)
 

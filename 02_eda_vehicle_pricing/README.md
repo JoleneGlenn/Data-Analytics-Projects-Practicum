@@ -10,6 +10,7 @@ Studying data collected over the last few years, determine which factors influen
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: This is one my very first coding projects, it contains details on the project and the work I performed, however it does not have a table of contents and I was still learning the syntax of Markdown, so finding the desired information in the formatting may be difficult.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF for more details)
 1. Open the data file and study the general information
@@ -24,6 +25,7 @@ pandas as pd
 matplotlib.pyplot as plt
 
 **Error Handling**
+
 sys
 
 warnings
@@ -54,6 +56,8 @@ Practicum provided the data set and the project requirements.
 My role was to interpret the requirements and create a report using jupyter notebook. The project was submitted for a review process.
 
 ### Applied Techniques
+**Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -80,7 +84,7 @@ Date related columns added
 Categorize the data
 - Functions and .apply()
 
-Graphs
+**Graphs**
 
 Histograms
 - df.hist()
@@ -99,7 +103,7 @@ Scatter plot
 BoxPlot
 - df[df['columna']].boxplot(column = 'columnb', by = 'value', figsize=(#,#))
 
-Analysis
+**Analysis**
 
 Statistics
 - Describe method for numerical data - can also provide info on categorical data too

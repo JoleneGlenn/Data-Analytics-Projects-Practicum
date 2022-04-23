@@ -8,6 +8,7 @@ Using the server logs of user visits from January 2017 - December 2018, the dump
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: There is a table of contents, however it does not have links as I was still learning the syntax of Markdown, so finding the desired information in the formatting may be difficult.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -37,6 +38,7 @@ datetime
 seaborn as sns
 
 **Error Handling**
+
 sys
 
 warnings
@@ -70,6 +72,7 @@ My role was to interpret the requirements and create a report using jupyter note
 
 ### Applied Techniques
 **Data Prep**
+
 Read .csv files as a dataframe with parse_dates
 	pd.read_csv('file.csv', parse_dates = ['date_col'])
 
@@ -88,7 +91,9 @@ Remove row of data out of scope of analysis
 		df.drop(df.index[-1], inplace = True)
 
 **Analysis**
+
 **Product**
+
 Create needed datetime columns
 - df['col_b'] = pd.to_datetime(df['col_a'].dt.date)
 	- alternative for a complete date: df['col_b'] = df['col_a'].astype('datetime64[W]')
@@ -146,6 +151,7 @@ Retention rates
 ```
 		
 **Sales**
+
 Find the conversion time in minutes
 - Create df with first session date and create df wtih first order date, merge into one table.
 - Create new column with conversion date
@@ -161,6 +167,7 @@ LTV (lifetime value)
 	- ltv_table = df.pivot_table(index = 'first_session_month', columns = 'cohort_age_month', values = 'ltv', aggfunc = 'mean').cumsum(axis = 1).fillna('')
 
 **Marketing**
+
 CAC (Customer Acquisition Cost)
 - create a series or new df of the first session date of a user
 - first_session_date = df.loc[df.groupby('user_id').session_start.idxmin()].reset_index()
@@ -180,6 +187,7 @@ ROMI (Return on Marketing Investment)
 	- Value of 1 means company broke even, above 1 means profits, below 1 means losses.
 
 **Graphs**
+
 Histogram
 - df['col'].hist(bins = #)
 

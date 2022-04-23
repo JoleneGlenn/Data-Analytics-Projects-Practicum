@@ -10,6 +10,7 @@ Use the sales funnel to investigate user behavior for the company's app to see w
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: There is a table of contents with Markdown links to assist in finding the desired information.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -35,6 +36,7 @@ scipy.stats as st
 math as mth
 
 **Error Handling:**
+
 sys
 
 warnings
@@ -127,6 +129,7 @@ My role was to interpret the requirements and create a report using jupyter note
 
 ### Applied Techniques
 **Data Prep**
+
 Read .csv files as a dataframe
 - df. = pd.read_csv('pathway')
 
@@ -148,6 +151,7 @@ Rename columns
 - df = df.rename(columns = {'old_col_name': 'new_col_name', ...})
 
 **Analysis**
+
 Pivot Tables
 - table = df.pivot_table(index = , columns = , values = , aggfunc = , margins = True, margins_name = 'name')
 
@@ -164,6 +168,7 @@ Find unique values
 	- new_df = df.groupby('col_a').agg('col_b': 'nunique'}).reset_index()
 
 **Funnel Analysis**
+
 It is better to use unique user data to evaluate the funnel, i.e. number of unique users per event / total number of unique users * 100 = % of users per event
 - the evaluation of the total number of each event is incorrect because users could do each event multiple times
 
@@ -174,6 +179,7 @@ Calculate the ratio of users from stage to stage of the event funnel
 	- df['perc_change'] = round(df['col_a'].sort_values(ascending = False).pct_change(periods = 1) * 100, 0).fillna(0).sort_values(by = col_a', ascending = False)
 
 **A/A/B Test Analysis**
+
 Create a function to run two proportions z-test
 - iterate over each event (for loop)
 - define the successes for tests a and b
@@ -191,6 +197,7 @@ Calculate the FWER
 - fwer = 1 - (1 - bonferonni_correction) ** num_tests
 
 **Graphs**
+
 Bar plots
 - graph_name = sns.barplot(data = df, x = df['date_col'].dt.date, y = 'col_b')
 - Add values above bars:

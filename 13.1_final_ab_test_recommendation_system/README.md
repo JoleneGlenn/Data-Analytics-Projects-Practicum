@@ -11,6 +11,7 @@ Test changes related to the introduction of an improved recommendation system to
 2. Special notes: There is a table of contents with Markdown links to assist in finding the desired information.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
 4. There may have been several ways to interpret the data provided based on the technical requirements. I interpreted the data/results to not match with the technical requirements. Due to the nature of the coding program I did not have a manager or team-lead to discuss these discrepancies and it was encouraged to create a report and wait for the code reviewer to provide feedback. If this was a project I had been assigned in a real life situation, I would have discussed these issues with my manager before moving forward to save time and effort and to make sure the data and technical requirements were correct.
+5. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -37,6 +38,7 @@ scipy.stats as st
 math as mth
 
 **Error Handling:**
+
 sys
 
 warnings
@@ -113,6 +115,7 @@ My role was to interpret the requirements and create a report using jupyter note
 
 ### Applied Techniques
 **Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -135,6 +138,7 @@ Fill in missing values
 - df['col'] = df['col'].fillna(value)
 
 **Analysis**
+
 Filter data using queries
 - df.query('col boolean_expression values')
 
@@ -173,6 +177,7 @@ Rename the values in the rows
 - new_df['col_a'] = new_df['col_b'].replace({'old_val_a': 'new_val_a', ...})
 
 **Hypothesis Testing**
+
 - Create a function to run two proportions z-test
 - Multiple-comparison correction for the alpha value
 	- Bonferroni Correction - use as alpha in multiple testing situations

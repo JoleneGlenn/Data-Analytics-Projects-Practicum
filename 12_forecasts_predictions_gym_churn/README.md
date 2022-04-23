@@ -14,6 +14,7 @@ Model Fitness wants to:
 1. The project shows the steps I took to answer the provided requirements and questions, it acts as a report but also a way to see my organization and thought processes to a business analytics problem with the tools I have learned at the time of the project.
 2. Special notes: There is a table of contents with Markdown links to assist in finding the desired information.
 3. There may be work from multiple versions based on reviewers requests/comments. I left all work for reference but the work done for each version may not be clear.
+4. **There may or may not be formatting issues with the notebook file (.ipynb). This is an artifact of Jupyter Notebooks having difficulty exporting custom HTML files. If there is please see the HTML file for a visual of the project.**
 
 ### Instructions for completing the project (high level - see PDF file for more details)
 1. Open the data file and study the general information
@@ -40,7 +41,9 @@ scipy.stats as st
 math as mth
 
 **Error Handling**
+
 sys
+
 warnings
 ```
 if not sys.warnoptions:
@@ -55,6 +58,7 @@ pd.set_option('display.max_columns', 100)
 ```
 
 **Modeling**
+
 train_test_split from sklearn.model_selection
 
 StandardScaler from sklearn.preprocessing
@@ -112,6 +116,7 @@ My role was to interpret the requirements and create a report using jupyter note
 
 ### Applied Techniques
 **Data Prep**
+
 Read .csv files as a dataframe
 - pd.read_csv()
 
@@ -126,6 +131,7 @@ Change letter case to lower
 - df.columns = df.columns.str.lower()
 
 **Analysis**
+
 Use pivot tables for calculations
 - df.pivot_table(index = ['col_a', 'col_b'], values = 'col_c', aggfunc = 'calculation').reset_index()
 	- rename columns
@@ -146,7 +152,8 @@ Create functions to graph data
 - created a function to graph histograms for numerical data
 - created a function to graph bar graphs categorical data
 
-Modeling
+**Modeling**
+
 - Remove features with multicollinearity for Logistic Regression models
 	- new_df = df.drop(['col_a', 'col_b', ...], axis = 1)
 - Logistic Regression
@@ -163,6 +170,7 @@ Clustering
 		- reviewer said to include random_state to make reproducible code and prevent cluster centroids from randomizing each time the code is run
 
 **Graphs**
+
 Bar graphs - two values per feature
 - graph_name = df[['col_a', 'col_b']].plot(kind = 'bar')
 - graph_name.set_xticklables(df['col_c'], rotation = 45, ha = 'right')
